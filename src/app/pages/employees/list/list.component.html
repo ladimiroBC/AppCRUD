@@ -1,0 +1,24 @@
+<div class="table-responsive">
+    <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Email</th>
+            <th class="d-none d-sm-block" scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="table-active" *ngFor="let item of employees$ | async">
+            <th scope="row">{{item.name}} {{item.lastName}}</th>
+            <td>{{item.email}}</td>
+            <td>{{item.startDate}}</td>
+            <td class="btn-group d-none d-sm-block" role="group">
+                <button type="button" class="btn btn-warning m-1" (click)="onGoToEdit(item)">Edit</button>
+                <button type="button" class="btn btn-warning m-1" (click)="onGoToSee(item)">See</button>
+                <button type="button" class="btn btn-danger m-1" (click)="onGoToDelete(item.id)">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+</div>

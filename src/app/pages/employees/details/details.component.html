@@ -1,0 +1,24 @@
+<div class="card mt-2">
+    <div class="card-header">
+
+    </div>
+    <div class="card-body">
+        <ul class="list-group list-group-flush">
+            <div class="list-group-item">
+                Name: <h5>{{employee.name}} {{employee.lastName}}</h5>
+            </div>
+            <div class="list-group-item">
+                Email: <h5>{{employee.email}}</h5>
+            </div>
+            <div class="list-group-item">
+                Start Date: <h5>{{employee.startDate}}</h5>
+            </div>
+        </ul>
+    </div>
+    <div class="btn-group" role="group">
+        <button type="button" class="btn btn-outline-warning m-1 btn-sm" (click)="onGoToEdit()">Edit</button>
+        <button type="button" class="btn btn-outline-danger m-1 btn-sm" (click)="onDelete()">Delete</button>
+    </div>
+</div>
+<button type="button" class="btn btn-outline-info mt-2 btn-lg" (click)="onGoToList()">Back To List</button><br>
+{{employee | json}}

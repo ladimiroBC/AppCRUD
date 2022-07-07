@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "crud-employees-36bf7": {
+      "hosting": {
+        "appCRUD": [
+          "crud-employees-36bf7"
+        ]
+      }
+    }
+  }
+}
